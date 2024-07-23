@@ -2,7 +2,7 @@
 """ Writing strings to Redis """
 import redis
 import uuid
-from typing import Union
+from typing import Union, Callable, Optional
 
 
 class Cache:
@@ -28,9 +28,9 @@ class Cache:
         return value
 
     def get_str(self, key: str) -> str:
-        """ doc doc method """
+        """ doc method """
         return self.get(key, fn=str)
 
     def get_int(self, key: str) -> int:
-        """ doc doc method """
+        """ doc method """
         return self.get(key, fn=int)
