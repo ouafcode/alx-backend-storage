@@ -18,6 +18,7 @@ def count_calls(method: Callable) -> Callable:
 
     return wrapper
 
+
 def call_history(method: Callable) -> Callable:
     """doc doc class"""
     inkey = method.__qualname__ + ":inputs"
@@ -32,6 +33,7 @@ def call_history(method: Callable) -> Callable:
         return res
 
     return wrapper
+
 
 class Cache:
     """ cashe class """
